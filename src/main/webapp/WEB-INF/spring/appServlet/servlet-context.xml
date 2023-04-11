@@ -24,17 +24,18 @@
 
 	<!-- Tiles -->
 	<beans:bean id="tilesConfigurer"
-		class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
 		<beans:property name="definitions">
 			<beans:list>
 				<beans:value>classpath:tiles/*.xml</beans:value>
 			</beans:list>
 		</beans:property>
+		<beans:property name="preparerFactoryClass" value="org.springframework.web.servlet.view.tiles2.SpringBeanPreparerFactory"/>
 	</beans:bean>
 	<beans:bean id="tilesViewResolver"
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<beans:property name="viewClass"
-			value="org.springframework.web.servlet.view.tiles3.TilesView" />
+			value="org.springframework.web.servlet.view.tiles2.TilesView" />
 		<beans:property name="order" value="1" /><!-- 우선순위를 1로 한다 -->
 	</beans:bean>
 

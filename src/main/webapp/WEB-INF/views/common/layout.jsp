@@ -11,7 +11,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title><tiles:insertAttribute name="title" /></title>
+<link href="${contextPath}/resources/css/main.css" rel="stylesheet" type="text/css" media="screen">
+<script src="${contextPath}/resources/jquery/stickysidebar.jquery.js" type="text/javascript"></script>
+<style type="text/css">
+
+</style>
+<script>
+$(function() {
+	$("#sticky").stickySidebar({
+		timer : 100,
+		easing : "easeInBounce"
+	});
+});
+</script>
 </head>
 <body>
 
